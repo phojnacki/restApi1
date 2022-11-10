@@ -18,6 +18,7 @@ namespace Application.Mappings
             {
                 ctg.CreateMap<Post, PostDto>();
                 ctg.CreateMap<CreatePostDto, Post>();
+                ctg.CreateMap<UpdatePostDto, Post>();
             })
             .CreateMapper();
     }
