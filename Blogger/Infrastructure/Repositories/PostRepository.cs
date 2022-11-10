@@ -12,9 +12,9 @@ namespace Infrastructure.Repositories
     {
         private static readonly ISet<Post> _posts = new HashSet<Post>()
         {
-            new Post(1, "Tytul 1","tresc 1"),
-            new Post(2, "Tytul 2","tresc 2"),
-            new Post(3, "Tytul 3","tresc 3")
+            new Post(1, "Dzien 1","Dzisiaj na swojej drodze spotkałem Łosia! Jest on ogromyn zwierzęciem"),
+            new Post(2, "Dzien 2","Po wczorajszej walce z Łosiem, ide w strone szpitala"),
+            new Post(3, "Dzien 3","Wróciłem ze szpitala, i poszedłem się zaopatrzyć w broń")
         };
 
         public IEnumerable<Post> GetAll()
