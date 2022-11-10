@@ -31,3 +31,5 @@ C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\Web
 C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\WebAPI\obj\Debug\net6.0\WebAPI.pdb
 C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\WebAPI\obj\Debug\net6.0\WebAPI.genruntimeconfig.cache
 C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\WebAPI\obj\Debug\net6.0\ref\WebAPI.dll
+C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\WebAPI\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Intern\source\repos\restApiProjects\restApi1Folder\restApi1\Blogger\WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll

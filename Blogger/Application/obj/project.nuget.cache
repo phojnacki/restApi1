@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "GZZqIkjmNOHcQ9fV72lNxiXhe5i/Irpz0hSu75K2Yw1v5emVNYtqnPcbFqsxo8jLhpAoDltdIRBSXk05tNXHNg==",
+  "dgSpecHash": "Yjs8GqmmUqRM9sQSx8ZIjTZRyEe9FfYSBxt9Nn3X/6v2xdEtSYpAdHZ6vLpgYgyXnUjr6TNdT5CquEQW5Z6KBA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Intern\\source\\repos\\restApiProjects\\restApi1Folder\\restApi1\\Blogger\\Application\\Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Intern\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\Intern\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
