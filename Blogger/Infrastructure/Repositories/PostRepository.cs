@@ -28,7 +28,8 @@ namespace Infrastructure.Repositories
         }
         public Post Add(Post post)
         {
-            post.Id = _posts.Count() + 1;
+            int lastId = _posts.Last().Id+1;
+            post.Id = lastId;
             post.Created = DateTime.UtcNow;
             _posts.Add(post);
             return post;
