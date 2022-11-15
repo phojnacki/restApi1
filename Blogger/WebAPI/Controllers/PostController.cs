@@ -40,6 +40,10 @@ namespace WebAPI.Controllers
         [HttpPost]
         public IActionResult Create(CreatePostDto newPost)
         {
+            if(newPost.Title.Equals("string") || newPost.Content.Equals("string"))
+            {
+                return BadRequest();
+            }
             var post = _postService.AddNewPost(newPost);
             return Created($"api/posts/{post.Id}",post);
         }
