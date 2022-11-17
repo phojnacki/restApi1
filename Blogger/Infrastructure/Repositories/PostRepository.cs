@@ -16,10 +16,12 @@ namespace Infrastructure.Repositories
             new Post(2, "Dzien 2","Po wczorajszej walce z Łosiem, ide w strone szpitala"),
             new Post(3, "Dzien 3","Wróciłem ze szpitala, i poszedłem się zaopatrzyć w broń")
         };
-
+        private static int _postsCount = _posts.Count();
         public IEnumerable<Post> GetAll()
         {
-            return _posts;
+            List<Post> SortedList = new List<Post>();
+            SortedList = _posts.OrderBy(x => x.Id).ToList();
+            return SortedList;
         }
 
         public Post GetById(int id)
@@ -28,10 +30,13 @@ namespace Infrastructure.Repositories
         }
         public Post Add(Post post)
         {
-            int lastId = _posts.Last().Id+1;
+            //int lastId = _posts.Count() == _postsCount-1 ? 1 : _posts.Last().Id + 1;
+            //int lastId = _posts.Last().Id + 1;
+            int lastId = _postsCount+=1;
             post.Id = lastId;
             post.Created = DateTime.UtcNow;
             _posts.Add(post);
+            _postsCount += 1;
             return post;
         }
         public void Update(Post post)
