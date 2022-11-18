@@ -23,6 +23,8 @@ builder.Services.AddSingleton(AutoMapperConfig.Initialize());
 // pozwala dodac podpowiedzi co dana metoda robi
 builder.Services.AddSwaggerGen(c => { c.EnableAnnotations(); });
 
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
