@@ -21,24 +21,15 @@ namespace Application.Services
             _mapper = mapper;
         }
 
-        public IEnumerable<PostDto> GetAllPosts()
+        public Task<IEnumerable<PostDto>> GetAllPosts()
         {
             var posts = _postRepository.GetAll();
-            //return posts.Select(post => new PostDto {Id=post.Id,Title=post.Title,Content=post.Content });
-            return _mapper.Map<IEnumerable<PostDto>>(posts);
+            return Task.FromResult(_mapper.Map<IEnumerable<PostDto>>(posts));
         }
 
-        public PostDto GetPostById(int id)
+        public async Task<PostDto> GetPostById(int id)
         {
-            var post = _postRepository.GetById(id);
-            /// bez autoMapper
-            //return new PostDto()
-            //{
-            //    Id = post.Id,
-            //    Title = post.Title,
-            //    Content = post.Content
-            //};
-            /// z
+            var post =  Task.FromResult(_postRepository.GetById(id));
             return _mapper.Map<PostDto>(post);
         }
         public PostDto AddNewPost(CreatePostDto newpost)
@@ -52,16 +43,16 @@ namespace Application.Services
             return _mapper.Map<PostDto>(post);
         }
 
-        public void UpdatePost(UpdatePostDto updatePost)
+        public async void UpdatePost(UpdatePostDto updatePost)
         {
-            var existingPost = _postRepository.GetById(updatePost.Id);
+            var existingPost =await _postRepository.GetById(updatePost.Id);
             var post = _mapper.Map(updatePost, existingPost);   
             _postRepository.Update(post);
         }
 
-        public void DeletePost(int id)
+        public async void DeletePost(int id)
         {
-            var post = _postRepository.GetById(id);
+            var post = await _postRepository.GetById(id);
             _postRepository.Delete(post);
         }
     }

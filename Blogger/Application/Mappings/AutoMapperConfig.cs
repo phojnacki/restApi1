@@ -17,8 +17,8 @@ namespace Application.Mappings
             => new MapperConfiguration(ctg =>
             {
                 ctg.CreateMap<Post, PostDto>();
-                ctg.CreateMap<CreatePostDto, Post>(); // zle
-                ctg.CreateMap<UpdatePostDto, Post>();
+                ctg.CreateMap<CreatePostDto, Post>();
+                ctg.CreateMap<UpdatePostDto, Post>();                
             })
             .CreateMapper();
     }

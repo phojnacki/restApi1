@@ -18,9 +18,9 @@ namespace WebAPI.Controllers
 
         [SwaggerOperation(Summary = "Retrieves all posts")]
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var posts = _postService.GetAllPosts();
+            var posts = await _postService.GetAllPosts();
             return Ok(posts);
         }
 

@@ -10,8 +10,8 @@ namespace Application.Interfaces
 {
     public interface IPostService
     {
-        IEnumerable<PostDto> GetAllPosts();
-        PostDto GetPostById(int id);
+        Task<IEnumerable<PostDto>> GetAllPosts();
+        Task<PostDto> GetPostById(int id);
 
         PostDto AddNewPost(CreatePostDto newpost);
 

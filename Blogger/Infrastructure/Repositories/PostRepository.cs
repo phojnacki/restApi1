@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Repositories
 {
-    public class PostRepository : IPostRepository
+    // ZMIENIC
+    public class PostRepository /*: IPostRepository*/
     {
         private static readonly ISet<Post> _posts = new HashSet<Post>()
         {
