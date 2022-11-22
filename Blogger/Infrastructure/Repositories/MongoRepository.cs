@@ -18,11 +18,11 @@ namespace Infrastructure.Repositories
         //connect to mongodb
         private IMongoCollection<Post> _mongoPosts;
 
-
         public MongoRepository(IMongoClient client)
         {
             var database = client.GetDatabase("Blogger");
             _mongoPosts = database.GetCollection<Post>("Posts");
+
         }
 
 

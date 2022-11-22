@@ -5,11 +5,11 @@
     build: .
     image: webapi:latest
     ports:
-     - 8000:80
+     - 5000:80
 
   mongo:
     image: mongo:latest
-    ports:
-    - 27017:27017
     volumes:
     - ./db-data/mongo/:/data/db
+    ports:
+    - 27017:27017

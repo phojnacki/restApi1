@@ -15,8 +15,6 @@ namespace Application.Services
     {
         private readonly IPostRepository _mongoRepository;
         private readonly IMapper _mapper;
-
-        // musi byc
         public MongoService(IPostRepository mongo, IMapper mapper)
         {
             _mongoRepository = mongo;
@@ -31,7 +29,7 @@ namespace Application.Services
 
         public async Task<PostDto> GetPostById(int id)
         {
-            Post post = await _mongoRepository.GetById(id);
+            Post post  = await _mongoRepository.GetById(id);
             return _mapper.Map<PostDto>(post);
         }
         public PostDto AddNewPost(CreatePostDto newpost)
@@ -41,7 +39,8 @@ namespace Application.Services
                 throw new Exception("Post can not have an empty title");
             }
             var post = _mapper.Map<Post>(newpost);
-            //post.Id = _
+            // lastindex 
+            post.Id = 0+1;
             _mongoRepository.Add(post);
             return _mapper.Map<PostDto>(post);
         }

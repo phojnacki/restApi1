@@ -26,9 +26,9 @@ namespace WebAPI.Controllers
 
         [SwaggerOperation(Summary = "Retrieves a specific post by unique id")]
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var post = _postService.GetPostById(id);
+            var post =await _postService.GetPostById(id);
             if(post == null)
             {
                 return NotFound();
